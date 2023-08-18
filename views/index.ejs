@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/views/style.css">
+    <title>My Blog | <%= title %></title>
+
+    
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <h2>Blogger</h2>
+            <div>
+              <ul>
+                <li>Home</li>
+                <li>About</a></li>
+                <li> <a href="/new" style="color: aqua;">Create New Blog</a></li>
+              </ul>
+            </div>
+        </nav>
+       <div class="header-content">
+             <h1 style="color: aqua;">My Blog</h1>
+             <h1>Landing Page</h1>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab aliquam, quam earum ut accusantium numquam?</p>
+             <button>Read More</button>
+            </div> 
+    </div>
+    <section>
+        <div class="body">
+            <h1>Blog Posts</h1>
+        </div>
+        <div class="card-group">
+            <% if (blogs.length > 0) { %>
+                <% blogs.forEach(blog => { %>
+                    <div class="card">
+                        <img src="<%= blog.imgsrc %>" class="card-img-top" alt="<<%= blog.imgalt  %>>"  height="200px" width="60px">
+                        <div class="card-body">
+                          <h5 class="card-title lead"><%= blog.title  %></h5>
+                          <p class="card-text"><%= blog.text  %></p>
+                          <p class="card-text"><small class="text-muted">Read More</small></p>
+                        </div>
+                      </div>
+                <% }); %>
+            
+            <% } else { %>
+                <h1>There are no blogs to display</h1>
+                <% } %>
+          </div>
+    </section>
+    <div class="footer">
+        <h2>Questions? call 000-000-000-000</h2>
+        <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <a href="#"> FAQ</a>
+                <a href="#"> Investor relations</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+                <div class="col-md">
+                    <a href="#"> Help Center</a>
+                    <a href="#"> Jobs</a>
+                    <a href="#">Cookies Preference</a>
+                    <a href="#">Legal Notices</a>
+                </div>
+                <div class="col-md">
+                    <a href="#">Account</a>
+                    <a href="#">Ways to watch</a>
+                    <a href="#">Corporate Information</a>
+                    <a href="#">Only on Netflix</a>
+                </div>
+                    <div class="col-md">
+                        <a href="#">Media Center</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+        </div>
+        <button class="language-btn">English</button>
+       <p class="copyright text-center">FavourtheDev.</p>
+    </div>
+</body>
+</html>

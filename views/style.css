@@ -1,0 +1,104 @@
+
+      .header{
+    background-color: rgb(15, 45, 91);
+    height: 70vh;
+}
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 0 30px;
+    color: aqua;
+    padding: 10px;
+}
+.header ul li:hover{
+    transition: .5s;
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+.header ul{
+    list-style-type: none;
+    display: flex;
+}
+.header ul li{
+    padding: 10px;
+}
+.header-content{
+    margin-left: 80px;
+    color: white;
+    padding: 80px;
+}
+.header-content h1{
+    font-size: 40px ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header-content button{
+    padding: 10px 25px;
+    border: 0;
+    background-color: aqua;
+    color: #fff;
+    border-radius: 20cm;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.body{
+    margin: 50px;
+}
+.body h1{
+    color: rgb(15, 45, 91);
+    text-align: center;
+    font-size: 30px ; 
+}
+.card-body{
+    text-align: justify;
+    margin: 50px 0;
+}
+.card{
+    margin: 0 20px;
+    border: none;
+    margin-bottom: 60px;
+}
+.card:hover>img{
+    transition: .5s;
+    cursor: pointer;
+}
+.footer{
+    padding: 50px 15% 10px;
+    background-color:  rgb(15, 45, 91);
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: aliceblue;
+ }
+  .footer .row .col-md{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  .footer .col-md a{
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .footer .language-btn{
+    background-color: aqua;
+    border: 2px solid seagreen;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+  .copyright{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px;
+  }
