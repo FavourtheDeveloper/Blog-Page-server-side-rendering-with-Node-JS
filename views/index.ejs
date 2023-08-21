@@ -38,7 +38,7 @@
             <% if (blogs.length > 0) { %>
                 <% blogs.forEach(blog => { %>
                     <div class="card">
-                        <img src="<%= blog.imgsrc %>" class="card-img-top" alt="<<%= blog.imgalt  %>>"  height="200px" width="60px">
+                        <img src="<%= blog.imgsrc %>" class="card-img-top" alt="<%= blog.imgalt  %>"  height="200px" width="60px">
                         <div class="card-body">
                           <h5 class="card-title lead"><%= blog.title  %></h5>
                           <p class="card-text"><%= blog.text  %></p>
@@ -83,6 +83,6 @@
         </div>
         <button class="language-btn">English</button>
        <p class="copyright text-center">FavourtheDev.</p>
-    </div>
+    </div> 
 </body>
 </html>
