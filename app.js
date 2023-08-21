@@ -42,7 +42,7 @@ app.get("/new", function (req, res) {
 app.get("/saveblogs", (req, res) => {
   const blog = new Blog({
     title: "Post 5 Headlineeee",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, voluptatibus!",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     imgsrc: "views/blog1.jpg",
     imgalt: "blog1",
   });
