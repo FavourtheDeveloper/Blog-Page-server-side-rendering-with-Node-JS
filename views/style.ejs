@@ -16,32 +16,32 @@
         <hr>
     </div>
     <div class="body">
-    <form >
-        <label for="fname">NAME:</label>
+    <form action="/" method="POST">
+        <label for="title">Title</label>
         <br>
         <br>
-        <input type="text" id="fname" name="fname" placeholder="first name">
-        <input type="text" id="lname" name="lname" placeholder="last name">
+        <input type="text" id="title" name="title" placeholder="Enter the title of your blog">
         <br>
         <br>
-        <label for="EMAIL">E-MAIL:</label>
+        <label for="your message">Text</label>
         <br>
         <br>
-        <input type="text" id="email" placeholder="enter your email">
+        <textarea name="text" id="text"></textarea> <br> <br>
+        <label for="imgsrc">imgsrc</label>
         <br>
         <br>
-        <label for="PHONE">PHONE:</label>
+        <input type="text" id="imgsrc" name="imgsrc" placeholder="imgsrc" value="views/blog1.jpg">
         <br>
         <br>
-        <input type="text" id="phone" placeholder="###### #####">
+        <label for="fname">imgalt</label>
         <br>
         <br>
-        <label for="your message">YOUR MESSAGE:</label>
-        <br>
-        <br>
-        <textarea name="message" id="message"></textarea>
+        <input type="text" id="imgalt" name="imgalt" placeholder="imgalt" value="blog1">
+        
+        <br><br>
+        <button> Post blog </button>
     </form>
-    <button><a href=""> SIGN UP</a></button>
+    
     </div>
 </body>
 </html>

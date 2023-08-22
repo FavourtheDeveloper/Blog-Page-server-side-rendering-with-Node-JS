@@ -35,21 +35,15 @@
             <h1>Blog Posts</h1>
         </div>
         <div class="card-group">
-            <% if (blogs.length > 0) { %>
-                <% blogs.forEach(blog => { %>
                     <div class="card">
-                        <img src="<%= blog.imgsrc %>" class="card-img-top" alt="<%= blog.imgalt  %>"  height="200px" width="60px">
+                        <img src="/<%= blog.imgsrc %>" class="card-img-top" alt="<%= blog.imgalt  %>"  height="200px" width="60px">
                         <div class="card-body">
                           <h5 class="card-title lead"><%= blog.title  %></h5>
                           <p class="card-text"><%= blog.text  %></p>
-                          <a href='./index/<%= blog._id %>'>Read More</a>
+
+                          <a class="delete" data-doc="<%= blog._id %>">Delete</a>
                         </div>
                       </div>
-                <% }); %>
-            
-            <% } else { %>
-                <h1>There are no blogs to display</h1>
-                <% } %>
           </div>
     </section>
     <div class="footer">
@@ -84,5 +78,24 @@
         <button class="language-btn">English</button>
        <p class="copyright text-center">FavourtheDev.</p>
     </div> 
+
+
+
+    <script>
+        const trashCan = document.querySelector('a.delete');
+
+        trashCan.addEventListener('click', (e) => {
+            const endPoint = `/index/${trashCan.dataset.doc}`;
+
+            fetch(endPoint,{
+                method: 'DELETE'
+        })
+        .then((response) => response.json())
+        .then((data) => window.location.href = data.redirect)
+        .catch((err) => {
+            console.log(err);
+        })
+    })
+    </script>
 </body>
 </html>
